@@ -1,10 +1,26 @@
 <h1>Mario's Specialty Food Products</h1>
 
 <h2>New Products</h2>
-<!-- TODO -->
+<% if @new_products.any? %>
+  <ul>
+    <% @new_products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No new products to show.</p>
+<% end %>
 
 <h2>Most Reviewed Product</h2>
-<!-- TODO -->
+<% if @most_reviewed_product.any? %>
+  <ul>
+    <% @most_reviewed_product.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No most reviewed product to show.</p>
+<% end %>
 
 <p><%= link_to "View All Products", products_path %></p>
 
