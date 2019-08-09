@@ -1,7 +1,13 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    if params[:usa]
+      @products = Product.made_in_usa
+      @usa = true
+    else
+      @products = Product.all
+      @usa = false
+    end
     render :index
   end
 
