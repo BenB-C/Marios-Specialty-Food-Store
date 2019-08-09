@@ -1,5 +1,6 @@
+<%= render "layouts/navbar" %>
 
-<h1>Products</h1>
+<h1>Products <%= @usa ? "Made in the USA" : "" %></h1>
 
 <% if @products.any? %>
   <ul>

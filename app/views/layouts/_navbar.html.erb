@@ -1,0 +1,5 @@
+<% content_for(:navbar) do %>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Products", products_path %></li>
+  <li><%= link_to "Made in the USA", products_path(usa: true) %></li>
+<% end %>
