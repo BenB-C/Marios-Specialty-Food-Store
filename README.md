@@ -71,7 +71,7 @@ If you find a bug, run into any issues, or have questions, ideas or concerns ple
 
 ## Technologies Used
 
-TODO
+* Ruby on Rails
 
 ### License
 
