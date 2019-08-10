@@ -1,6 +1,7 @@
 <%= render "layouts/navbar" %>
 
 <h1>Products <%= @usa ? "Made in the USA" : "" %></h1>
+<p><%= link_to "Add a product", new_product_path(@product) %></p>
 
 <% if @products.any? %>
   <ul>
@@ -11,5 +12,3 @@
 <% else %>
   <p>No products to show.</p>
 <% end %>
-
-<p><%= link_to "Add a product", new_product_path(@product) %></p>

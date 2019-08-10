@@ -1,27 +1,50 @@
-<h1>Mario's Specialty Food Products</h1>
+<div class="jumbotron ">
+  <h1 class="display-4">Mario's Specialty Food Products</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        <%= link_to "All Products", products_path %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to "Made in the USA", products_path(usa: true) %>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2>New Products</h2>
-<% if @new_products.any? %>
-  <ul>
-    <% @new_products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No new products to show.</p>
-<% end %>
-
-<h2>Most Reviewed Product</h2>
-<% if @most_reviewed_product.any? %>
-  <ul>
-    <% @most_reviewed_product.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No most reviewed product to show.</p>
-<% end %>
-
-<p><%= link_to "View All Products", products_path %></p>
-
-<p><%= link_to "View Products Made in the USA", products_path(usa: true) %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="landing_page_heading">New Products</h2>
+      <div class="centered-list">
+        <% if @new_products.any? %>
+          <ul>
+            <% @new_products.each do |product| %>
+              <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>No new products to show.</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="landing_page_heading">Most Reviewed Product</h2>
+      <div class="centered-list">
+        <% if @most_reviewed_product.any? %>
+          <ul>
+            <% @most_reviewed_product.each do |product| %>
+              <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>No most reviewed product to show.</p>
+        <% end %>
+      <div class="centered-list">
+    </div>
+  </div>
+</div>
