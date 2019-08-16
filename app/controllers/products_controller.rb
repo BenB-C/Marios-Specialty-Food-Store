@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    if params[:usa]
+    if params[:usa] == "true"
       @products = Product.made_in_usa
       @usa = true
     else
