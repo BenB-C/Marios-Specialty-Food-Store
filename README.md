@@ -1,5 +1,7 @@
 # Food Store
 
+Heroku deployment: https://afternoon-garden-33195.herokuapp.com/
+
 #### Epicodus Ruby and Rails - Rails with Active Record - 2019.08.09
 
 #### By Ben Bennett-Cauchon
