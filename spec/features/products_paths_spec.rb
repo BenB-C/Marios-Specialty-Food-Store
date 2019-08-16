@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "#ProductsController" do
+describe "product paths" do
   before :each do
     Product.destroy_all
   end

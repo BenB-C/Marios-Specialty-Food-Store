@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe Product do
+  before :each do
+    Product.destroy_all
+  end
+
   it { should have_many(:reviews)}
   # All fields should be filled out.
   it { should validate_presence_of :name }
