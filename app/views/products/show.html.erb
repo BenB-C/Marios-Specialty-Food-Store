@@ -5,9 +5,12 @@
 <h3>Country of origin: <%= @product.country_of_origin %></h3>
 <p>
   <%= link_to "Edit product details", edit_product_path(@product) %> -
-  <%= link_to "Delete product", product_path(@product),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %>
+  <% if @show_confirm_delete %>
+    Are you sure? <%= link_to "YES", product_path(id: @product.id, delete_confirmed: true), data: {method: "delete"} %> <%= link_to "NO", product_path(@product) %>
+
+  <% else %>
+    <%= link_to "Delete product", product_path(@product), data: {method: "delete"} %>
+  <% end %>
 </p>
 
 <h4><%= @product.reviews.length %> Reviews</h4>

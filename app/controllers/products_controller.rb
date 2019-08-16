@@ -34,6 +34,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @show_confirm_delete = params[:show_confirm_delete]
     render :show
   end
 
@@ -48,8 +49,12 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to products_path
+    if params[:delete_confirmed]
+      @product.destroy
+      redirect_to products_path
+    else
+      redirect_to product_path(id: @product.id, show_confirm_delete: true)
+    end
   end
 
   private
