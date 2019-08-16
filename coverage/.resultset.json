@@ -85,6 +85,10 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        1,
         null
       ],
       "/Users/ben/Desktop/Epicodus-Ruby-and-Rails-Week-5-Project/config/environment.rb": [
@@ -298,6 +302,22 @@
         null,
         null
       ],
+      "/Users/ben/Desktop/Epicodus-Ruby-and-Rails-Week-5-Project/spec/factories.rb": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/ben/Desktop/Epicodus-Ruby-and-Rails-Week-5-Project/config/routes.rb": [
         1,
         1,
@@ -326,6 +346,11 @@
         2,
         2,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/ben/Desktop/Epicodus-Ruby-and-Rails-Week-5-Project/app/models/product.rb": [
@@ -350,7 +375,7 @@
         null,
         1,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -374,6 +399,13 @@
         null,
         2,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -407,6 +439,6 @@
         null
       ]
     },
-    "timestamp": 1565969125
+    "timestamp": 1565971615
   }
 }
