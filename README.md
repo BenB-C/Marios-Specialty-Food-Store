@@ -74,6 +74,15 @@ If you find a bug, run into any issues, or have questions, ideas or concerns ple
 ## Technologies Used
 
 * Ruby on Rails
+* ActiveRecord
+* RSpec
+* Shoulda-Matchers
+* Capybara
+* Faker
+* FactoryBot
+* SimpleCov
+* Devise
+* Heroku
 
 ### License
 
