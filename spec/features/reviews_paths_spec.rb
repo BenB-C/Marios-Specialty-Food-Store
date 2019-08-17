@@ -28,4 +28,22 @@ describe "review paths" do
     end
   end
 
+  it "shows an error if fields are not filled in" do
+    product = FactoryBot.create(:product)
+    user = FactoryBot.create(:user, email: "123@4")
+    visit root_path
+    click_link "Login"
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    click_button "Log in"
+    visit product_path(product)
+    click_link "Add a review"
+    click_button "Create Review"
+    expect(page).to have_content "Could not save new review!"
+    expect(page).to have_content "Content body can't be blank"
+    expect(page).to have_content "Content body is too short (minimum is 50 characters)"
+    expect(page).to have_content "Rating can't be blank"
+    expect(page).to have_content "Rating is not included in the list"
+  end
+
 end
